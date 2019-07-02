@@ -1,5 +1,5 @@
 # MakeAModelFrom-code
-通过代码制作模型的一个demo
+通过代码制作模型的一个demo\n
 在SCRIPT6中的代码可以当做是一个模板
 private Vector3 Faxian(Vector3 a, Vector3 b, Vector3 c, int index = 0)
 private void AddCorss(ref Dictionary<int, Vector3> _dic_v3Normal, List<Vector3> _list_v3Vertices, int a, int b, int c)
