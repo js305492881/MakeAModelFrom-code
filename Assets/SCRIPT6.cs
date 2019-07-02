@@ -213,7 +213,6 @@ public class SCRIPT6 : MonoBehaviour
 
         m_mesh.triangles = m_list_nTriangles.ToArray();//画模型,每三个为一组,为一个面
         m_mesh.normals = m_list_v3Normal.ToArray();//法线   法线的向量和 vertices 一一对应
-        //Debug.Log(m_list_v3Vertices.Count + "_" + m_list_v3Normal.Count);
 
         m_meshFilter.mesh = m_mesh;
     }

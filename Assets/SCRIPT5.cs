@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SCRIPT5 : MonoBehaviour
 {
@@ -16,6 +14,7 @@ public class SCRIPT5 : MonoBehaviour
     {
         m_meshFilter = GetComponent<MeshFilter>();
         m_mesh = new Mesh();
+
         Vector3[] vertices = new Vector3[]
         {
             m_objA.transform.position,
@@ -26,32 +25,35 @@ public class SCRIPT5 : MonoBehaviour
             m_objD.transform.position,
         };
 
-        int[] triangles = new int[] {
+        int[] triangles = new int[] 
+        {
             0, 1, 2,
             3, 4, 5
         };
 
-        Vector3[] normals = new Vector3[] {
+        Vector3[] normals = new Vector3[] 
+        {
             new Vector3(0,0,-1),
             new Vector3(0,0,-1),
             new Vector3(0,0,-1),
             new Vector3(-1,0,0),
             new Vector3(-1,0,0),
-            new Vector3(-1,0,0),
+            new Vector3(-1,0,0)
         };
 
-        Vector2[] uv = new Vector2[] {
+        Vector2[] uv = new Vector2[] 
+        {
             new Vector2(0,1),
             new Vector2(1,1),
             new Vector2(0,0),
-            new Vector2(0.75f,0.75f),
-            new Vector2(0.75f,0.25f),
-            new Vector2(0.25f,0.75f)
+            new Vector2(0.75f,0.75f),  //修改 第二个面 A点在贴图的位置
+            new Vector2(0.75f,0.25f),  //修改 第二个面 C点在贴图的位置
+            new Vector2(0.25f,0.75f)   //修改 第二个面 D点在贴图的位置
         };
 
-        m_mesh.vertices = vertices;//把点放到mesh中
-        m_mesh.triangles = triangles;//画模型,每三个为一组,为一个面
-        m_mesh.normals = normals;//法线   法线的向量和 vertices 一一对应
+        m_mesh.vertices = vertices;
+        m_mesh.triangles = triangles;
+        m_mesh.normals = normals;
         m_mesh.uv = uv;
 
         m_meshFilter.mesh = m_mesh;

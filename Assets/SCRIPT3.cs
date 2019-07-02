@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SCRIPT3 : MonoBehaviour
 {
@@ -16,35 +14,37 @@ public class SCRIPT3 : MonoBehaviour
     {
         m_meshFilter = GetComponent<MeshFilter>();
         m_mesh = new Mesh();
+
         Vector3[] vertices = new Vector3[]
         {
             m_objA.transform.position,
             m_objB.transform.position,
             m_objC.transform.position,
-            m_objA.transform.position,
-            m_objC.transform.position,
-            m_objD.transform.position,
+            m_objA.transform.position, //新增   第二个面的A点
+            m_objC.transform.position, //新增   第二个面的C点
+            m_objD.transform.position
         };
 
-        int[] triangles = new int[] {
+        int[] triangles = new int[] 
+        {
             0, 1, 2,
-            3, 4, 5
+            3, 4, 5  //修改  第二个面的序列发生了变化
         };
 
-        Vector3[] normals = new Vector3[] {
-            new Vector3(0,0,-1),
-            new Vector3(0,0,-1),
-            new Vector3(0,0,-1),
-            new Vector3(-1,0,0),
-            new Vector3(-1,0,0),
-            new Vector3(-1,0,0),
+        Vector3[] normals = new Vector3[] //新增 法线序列 
+        { 
+            new Vector3(0,0,-1), //新增 第一个面A点的法线方向
+            new Vector3(0,0,-1), //新增 第一个面B点的法线方向
+            new Vector3(0,0,-1), //新增 第一个面C点的法线方向
+            new Vector3(-1,0,0), //新增 第二个面A点的法线方向
+            new Vector3(-1,0,0), //新增 第二个面B点的法线方向
+            new Vector3(-1,0,0)  //新增 第二个面C点的法线方向
         };
 
-        m_mesh.vertices = vertices;//把点放到mesh中
-        m_mesh.triangles = triangles;//画模型,每三个为一组,为一个面
-        m_mesh.normals = normals;//法线   法线的向量和 vertices 一一对应
+        m_mesh.vertices = vertices;
+        m_mesh.triangles = triangles;
+        m_mesh.normals = normals; //新增 法线列表 放入mesh中
 
         m_meshFilter.mesh = m_mesh;
     }
-
 }
