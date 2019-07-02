@@ -37,8 +37,8 @@ public class SCRIPT3 : MonoBehaviour
             new Vector3(0,0,-1), //新增 第一个面B点的法线方向
             new Vector3(0,0,-1), //新增 第一个面C点的法线方向
             new Vector3(-1,0,0), //新增 第二个面A点的法线方向
-            new Vector3(-1,0,0), //新增 第二个面B点的法线方向
-            new Vector3(-1,0,0)  //新增 第二个面C点的法线方向
+            new Vector3(-1,0,0), //新增 第二个面C点的法线方向
+            new Vector3(-1,0,0)  //新增 第二个面D点的法线方向
         };
 
         m_mesh.vertices = vertices;
