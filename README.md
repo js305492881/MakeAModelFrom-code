@@ -13,7 +13,7 @@ protected void DrawModel(ref List<int> _list_nTriangles, ref Dictionary<int, Vec
 Mesh 网格:模型的网格，建模就是建网格。  
 Mesh Filter 网格过滤器:  内包含一个Mesh组件，可以根据MeshFilter获得模型网格的组件，也可以为MeshFilter设置Mesh内容。  
 Mesh Renderer 网格渲染器: 是用于把网格渲染出来的组件。MeshFilter的作用就是把Mesh扔给MeshRender将模型或者说是几何体绘制显示出来。  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明2.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明2.png)  
   
 Mesh 网格属性:  
 顶点坐标（vertex）顶点坐标数组存放Mesh的每个顶点的空间坐标，假设某mesh有n个顶点，则顶点坐标的的size为n  
@@ -29,14 +29,20 @@ Mesh 网格属性:
 工程简介  
 工程共有六个场景从1到6难度由浅到深 场景中会有四个点 A红 B绿 C蓝 D黄  
 一场景:ABC制作为一个面  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明3.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明3.png)  
+  
 二场景:ABC和ACD制作两个面  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明4.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明4.png)  
+  
 三场景:加入法线,让模型看上去有棱角感  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明5.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明5.png)  
+  
 四场景:ABC面加入UV  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明6.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明6.png)  
+  
 五场景:ACD面加入UV  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明7.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明7.png)  
+  
 六场景:动态制作一个圆柱体,整个过程是动态的,方便大家观察  
-![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明8.png)
+![如图](https://github.com/js305492881/MakeAModelFrom-code/blob/master/Assets/Image/说明8.png)  
+  
